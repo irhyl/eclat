@@ -1,0 +1,50 @@
+{
+  "openai": {
+    "found": true,
+    "version": "2.13.0"
+  },
+  "sentence_transformers": {
+    "found": true,
+    "version": "5.2.0"
+  },
+  "transformers": {
+    "found": true,
+    "version": "4.57.3"
+  },
+  "sklearn": {
+    "found": true,
+    "version": "1.8.0"
+  },
+  "xgboost": {
+    "found": true,
+    "version": "3.1.2"
+  },
+  "torch": {
+    "found": true,
+    "version": "2.9.1+cpu"
+  },
+  "networkx": {
+    "found": true,
+    "version": "3.6.1"
+  },
+  "pandas": {
+    "found": true,
+    "version": "2.3.3"
+  },
+  "jinja2": {
+    "found": true,
+    "version": "3.1.6"
+  },
+  "matplotlib": {
+    "found": true,
+    "version": "3.10.8"
+  },
+  "faiss": {
+    "found": false,
+    "version": null
+  },
+  "hnswlib": {
+    "found": false,
+    "version": null
+  }
+}

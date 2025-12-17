@@ -1,0 +1,4 @@
+{
+  "train": "artifacts\\train.parquet",
+  "test": "artifacts\\test.parquet"
+}

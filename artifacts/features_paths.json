@@ -1,0 +1,4 @@
+{
+  "features_table": "features\\features_table.parquet",
+  "features_sample": "features\\features_sample.parquet"
+}
