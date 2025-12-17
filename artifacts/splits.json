@@ -1,4 +1,4 @@
 {
-  "train": "artifacts\\train.parquet",
-  "test": "artifacts\\test.parquet"
+  "train": "C:\\Users\\ADITI\\Desktop\\rhyl-projects\\eclat\\artifacts\\train.parquet",
+  "test": "C:\\Users\\ADITI\\Desktop\\rhyl-projects\\eclat\\artifacts\\test.parquet"
 }
