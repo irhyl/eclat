@@ -1,0 +1,26 @@
+[
+  {
+    "text": "I plan to start next month and am excited about the future",
+    "credit": 700,
+    "resonance": 0.9,
+    "raw_urgency": 0.2,
+    "penalized_urgency": 0.2,
+    "reason": "no penalty"
+  },
+  {
+    "text": "This is urgent, we need priority support",
+    "credit": 580,
+    "resonance": 0.1,
+    "raw_urgency": 0.8,
+    "penalized_urgency": 0.16,
+    "reason": "penalized (credit 580 < 600)"
+  },
+  {
+    "text": "Curious about pricing, not urgent",
+    "credit": 620,
+    "resonance": 0.1,
+    "raw_urgency": 0.8,
+    "penalized_urgency": 0.8,
+    "reason": "no penalty"
+  }
+]
