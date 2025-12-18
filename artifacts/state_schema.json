@@ -1,0 +1,183 @@
+{
+  "Message": {
+    "$defs": {
+      "EmotionalState": {
+        "enum": [
+          "neutral",
+          "positive",
+          "negative",
+          "frustrated",
+          "engaged"
+        ],
+        "title": "EmotionalState",
+        "type": "string"
+      },
+      "IntentClarity": {
+        "enum": [
+          "clear",
+          "ambiguous",
+          "unknown"
+        ],
+        "title": "IntentClarity",
+        "type": "string"
+      }
+    },
+    "properties": {
+      "id": {
+        "description": "Unique message identifier",
+        "title": "Id",
+        "type": "string"
+      },
+      "sender": {
+        "title": "Sender",
+        "type": "string"
+      },
+      "recipient": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Recipient"
+      },
+      "text": {
+        "title": "Text",
+        "type": "string"
+      },
+      "ts": {
+        "description": "Timestamp in seconds (monotonic/epoch)",
+        "title": "Ts",
+        "type": "number"
+      },
+      "emotional_state": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/EmotionalState"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": "neutral"
+      },
+      "intent_clarity": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/IntentClarity"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": "unknown"
+      },
+      "metadata": {
+        "anyOf": [
+          {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Metadata"
+      }
+    },
+    "required": [
+      "id",
+      "sender",
+      "recipient",
+      "text",
+      "ts"
+    ],
+    "title": "Message",
+    "type": "object"
+  },
+  "UserContext": {
+    "$defs": {
+      "EmotionalState": {
+        "enum": [
+          "neutral",
+          "positive",
+          "negative",
+          "frustrated",
+          "engaged"
+        ],
+        "title": "EmotionalState",
+        "type": "string"
+      },
+      "IntentClarity": {
+        "enum": [
+          "clear",
+          "ambiguous",
+          "unknown"
+        ],
+        "title": "IntentClarity",
+        "type": "string"
+      }
+    },
+    "properties": {
+      "user_id": {
+        "title": "User Id",
+        "type": "string"
+      },
+      "last_seen_ts": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Last Seen Ts"
+      },
+      "readiness": {
+        "anyOf": [
+          {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "description": "Normalized readiness distribution",
+        "title": "Readiness"
+      },
+      "emotional_state": {
+        "$ref": "#/$defs/EmotionalState",
+        "default": "neutral"
+      },
+      "intent_clarity": {
+        "$ref": "#/$defs/IntentClarity",
+        "default": "unknown"
+      },
+      "notes": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Notes"
+      }
+    },
+    "required": [
+      "user_id"
+    ],
+    "title": "UserContext",
+    "type": "object"
+  }
+}
